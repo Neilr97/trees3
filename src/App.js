@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Toolbar from './components/Toolbar.js';
+import Display from './components/Display.js';
+
 
 function App() {
   return (
@@ -10,15 +13,12 @@ function App() {
         <p>
           Trees Project. <br></br>Please stand by for launch.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test! Test! Test!
-        </a>
+
       </header>
+      <div className="AppContainer">
+        <Toolbar></Toolbar>
+        <Display></Display>
+      </div>
     </div>
   );
 }
