@@ -12,12 +12,14 @@ class Toolbar extends React.Component {
     render() {
       return (
         <div className="toolbar">
+          <h1>Hello, Toolbar</h1>
             <div className="logo">
                 <img src={logo} alt="Logo" />
             </div>
-            <h1>Hello, Toolbar</h1>
+            
             <Cart></Cart>
             <User></User>
+            <h1>Toolbar Ends</h1>
         </div>
       );
     }

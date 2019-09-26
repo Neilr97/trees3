@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import Search from './Search.js';
+import Browse from './Browse.js';
 import Checkout from './Checkout.js';
 
 class Display extends React.Component {
     constructor() {
             super();
             this.state = {
-                mode: "search",
+                mode: "browse",
                 productList:"treeList.json"
             };
         }
@@ -16,15 +16,17 @@ class Display extends React.Component {
     render() {
       return (
             <div className="displayBox">
+                <h1>Hello, Display</h1>
             {
-              (this.state.mode === "search") ? 
-              <Search></Search> :
+              (this.state.mode === "browse") ? 
+              <Browse></Browse> :
               (this.state.mode === "checkout") ? 
               <Checkout></Checkout> :
               null
             }
-            <h1>Hello, Display</h1>
+            
             <Button variant="outlined" onClick={this.switchState}>Click to change Mode</Button>
+            <h1>Display Ends</h1>
         </div>
 
             
@@ -35,18 +37,18 @@ class Display extends React.Component {
     this.setState({mode:"checkout", productList:"treeList.json"});
     }
 
-    setSearch = () => {
-    this.setState({mode:"search", productList:"treeList.json"});
+    setBrowse = () => {
+    this.setState({mode:"browse", productList:"treeList.json"});
     }
 
     switchState = () => {
-        if (this.state.mode === "search")
+        if (this.state.mode === "browse")
         {
             this.setCheckout();
         }
         if (this.state.mode === "checkout")
         {
-            this.setSearch();
+            this.setBrowse();
         }
     }
 

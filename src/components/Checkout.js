@@ -6,8 +6,13 @@ class Checkout extends React.Component {
     }
 
     render() {
-      return <h1>Hello, Checkout</h1>;
-    }
+      return (
+        <div>
+          <h1>Hello, Checkout</h1>
+          <h1>Checkout Ends</h1>
+        </div>
+      );
+    };
 }
 
 export default Checkout;

@@ -6,7 +6,12 @@ class Search extends React.Component {
     }
 
     render() {
-      return <h1>Hello, Search</h1>;
+      return (
+        <div>
+          <h1>Hello, Search</h1>
+          <h1>Search Ends</h1>
+        </div>
+      );
     }
 }
 
