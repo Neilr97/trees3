@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Browse from './Browse.js';
 import Checkout from './Checkout.js';
+import './stylesheets/display.css'
+
 
 class Display extends React.Component {
     constructor() {

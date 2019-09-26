@@ -6,6 +6,7 @@
             "category":"Tree",
             "sciencyName":"Quercus Alba",
             "prefEnvironment":"Half Shade",
+            "imgLink":"https://images.app.goo.gl/2ovrDcbYmQoZChj69",
             "version":[
                 {
                     "age": "1 Year",
@@ -25,6 +26,7 @@
             "category":"Tree",
             "sciencyName":"Ulmus laevis",
             "prefEnvironment":"Full Sunshine",
+            "imgLink":"https://images.app.goo.gl/reabEgtHfeWSrFP16",
             "version":[
                 {
                     "age": "1 Year",
@@ -39,6 +41,7 @@
             "category":"Tree",
             "sciencyName":"Rhopalostylis sapida",
             "prefEnvironment":"Full Sun",
+            "imgLink":"https://images.app.goo.gl/6VnVpM8uZ34jgTcr9",
             "version":[
                 {
                     "age": "1 Year",
@@ -52,6 +55,7 @@
             "itemName":"Potting mix",
             "category":"Dirt",
             "prefEnvironment":"Multi Purpose",
+            "imgLink":"https://images.app.goo.gl/WiGxiaKa2Z2NN5Vu6",
             "version":[
                 {
                     "volume": "30L",

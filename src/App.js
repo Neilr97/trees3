@@ -15,8 +15,9 @@ function App() {
         </p>
 
       </header>
-      <div className="AppContainer">
+      <div className="AppContainer" style={{margin:'0px'}}>
         <Toolbar></Toolbar>
+        <br></br>
         <Display></Display>
       </div>
     </div>

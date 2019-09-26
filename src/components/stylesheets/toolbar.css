@@ -1,14 +1,33 @@
 .toolbar{
     color:#eaeaea;
     background-color:#227722;
-    float:top;
+    width:100%;
+    height:100px;
+    margin:0px;
+
 }
 .logoimg{
-    width:100%; height:100%;
+    width:100%; 
+    height:100%;
+    margin:0px;
 }
 .logo{
     height:"100px";
     width:"100px";
     background-color:"black";
     color:blue;
+    margin:0px;
+
+}
+.toolbaricon{
+    float:left;
+    background-color:#227722;
+    height:100px;
+    margin:0px;
+}
+.finaltoolbaricon{
+    float:right;
+    background-color:#227722;
+    height:100px;
+    margin:0px;
 }
