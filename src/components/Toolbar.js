@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../logo.svg";
 import Cart from './Cart.js';
 import User from './User.js';
-
+import './stylesheets/toolbar.css'
 
 class Toolbar extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Toolbar extends React.Component {
         <div className="toolbar">
           <h1>Hello, Toolbar</h1>
             <div className="logo">
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" width={100} height={100}/>
             </div>
             
             <Cart></Cart>

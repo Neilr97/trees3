@@ -1,0 +1,14 @@
+.toolbar{
+    color:#eaeaea;
+    background-color:#227722;
+    float:top;
+}
+.logoimg{
+    width:100%; height:100%;
+}
+.logo{
+    height:"100px";
+    width:"100px";
+    background-color:"black";
+    color:blue;
+}
