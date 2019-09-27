@@ -29,6 +29,21 @@ class User extends Component {
             }
         };
     }
+    writeToJSON = () =>
+    {
+        const fs = require('fs');
+
+        let user = {
+            fname:this.state.firstName,
+            lname:this.state.lastName,
+            email:this.state.email,
+            password:this.state.password
+        };
+        console.log(user);
+
+        let data = JSON.stringify(user);
+        fs.writeFileSync("../users.json",data);
+    }
 
     handleSubmit = a => {
         a.preventDefault();
@@ -48,20 +63,17 @@ class User extends Component {
 
         switch(name){
             case "firstName":
-            errorCatch.firstName = 
-            value.length < 3 ? "At least 3 characters needed" : "";
+                errorCatch.firstName = 
+                value.length < 3 ? "At least 3 characters needed" : "";
             break;
-
             case "lastname":
-            errorCatch.firstName = value.length < 3 ? "At least 3 characters needed" : "";
+                errorCatch.firstName = value.length < 3 ? "At least 3 characters needed" : "";
             break;
-
             case "password":
-            errorCatch.firstName = value.length < 6 ? "At least 6 characters needed " : "";
+                errorCatch.firstName = value.length < 6 ? "At least 6 characters needed " : "";
             break;
-
             case "email":
-            errorCatch.email = emailRegularExpression.test(value) < 3 && value.length > 0 ? "":"Invaild Email";
+                errorCatch.email = emailRegularExpression.test(value) < 3 && value.length > 0 ? "":"Invaild Email";
             break;
 
             break;
@@ -137,8 +149,7 @@ class User extends Component {
                 )}
                 </div>
                 <div className="accountCreate">
-                    <button type="submit">Create Account</button>
-                    <small>Account Already in Use</small>
+                    <button type="submit" onClick={this.writeToJSON}>Create Account</button>
                 </div>
             </form>
             </div>
