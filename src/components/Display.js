@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Browse from './Browse.js';
 import Checkout from './Checkout.js';
+import './stylesheets/display.css'
+
 
 class Display extends React.Component {
     constructor() {
@@ -16,7 +18,6 @@ class Display extends React.Component {
     render() {
       return (
             <div className="displayBox">
-                <h1>Hello, Display</h1>
             {
               (this.state.mode === "browse") ? 
               <Browse></Browse> :

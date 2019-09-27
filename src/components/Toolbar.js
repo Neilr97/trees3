@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../logo.svg";
 import Cart from './Cart.js';
 import User from './User.js';
-
+import './stylesheets/toolbar.css'
 
 class Toolbar extends React.Component {
     constructor(props) {
@@ -12,14 +12,23 @@ class Toolbar extends React.Component {
     render() {
       return (
         <div className="toolbar">
-          <h1>Hello, Toolbar</h1>
+
+          <div className="toolbaricon">
+            <h1>Plant a Tree</h1>
+          </div>
+          <div className="toolbaricon">
             <div className="logo">
-                <img src={logo} alt="Logo" />
+              <img src={logo} alt="Logo" width={100} height={100}/>
             </div>
-            
+          </div>
+          <div className="toolbaricon">
             <Cart></Cart>
+          </div>
+          <div className="finaltoolbaricon">
             <User></User>
-            <h1>Toolbar Ends</h1>
+          </div>
+
+          
         </div>
       );
     }
