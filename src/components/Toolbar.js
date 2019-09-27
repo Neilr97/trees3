@@ -14,7 +14,7 @@ class Toolbar extends React.Component {
         <div className="toolbar">
 
           <div className="toolbaricon">
-            <h1>Hello, Toolbar</h1>
+            <h1>Plant a Tree</h1>
           </div>
           <div className="toolbaricon">
             <div className="logo">
@@ -24,12 +24,10 @@ class Toolbar extends React.Component {
           <div className="toolbaricon">
             <Cart></Cart>
           </div>
-          <div className="toolbaricon">
+          <div className="finaltoolbaricon">
             <User></User>
           </div>
-          <div className="finaltoolbaricon">
-            <h1>Toolbar Ends</h1>
-          </div>
+
           
         </div>
       );

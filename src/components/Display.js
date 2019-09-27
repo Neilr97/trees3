@@ -18,7 +18,6 @@ class Display extends React.Component {
     render() {
       return (
             <div className="displayBox">
-                <h1>Hello, Display</h1>
             {
               (this.state.mode === "browse") ? 
               <Browse></Browse> :
