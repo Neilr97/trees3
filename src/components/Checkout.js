@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Checkout extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class Checkout extends Component {
+  constructor() {
+      super();
+  }
 
-    render() {
-      return (
-        <div>
-          <h1>Hello, Checkout</h1>
-          <h1>Checkout Ends</h1>
-        </div>
-      );
-    };
+  render() {
+    return (
+      <div>
+        <h3>Hello, Checkout</h3>
+        <h3>Checkout Ends</h3>
+      </div>
+    );
+  };
 }
 
 export default Checkout;
