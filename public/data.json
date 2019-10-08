@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "0001",
+      "name": "White Oak",
+      "category": ["oak"],
+      "sciencyName": "Quercus alba",
+      "sun": "Partial shade",
+      "imgLink": "https://indianoakstreefarm.com/wp-content/uploads/2017/08/white-oak-3.jpg",
+      "height": ["2m", "3m"],
+      "growthRate": "Slow",
+      "price": "100"
+    },
+
+    {
+      "id": "0002",
+      "name": "Elm",
+      "category": ["elm"],
+      "sciencyName": "Ulmus laevis",
+      "sun": "Full sunshine",
+      "imgLink": "https://www.pfw.edu/microsites/native-trees/images/trees/hero-images/american-elm.jpg",
+      "height": ["2m", "3m"],
+      "growthRate": "Fast",
+      "price": "120"
+    },
+
+    {
+      "id": "0003",
+      "name": "Nikau Palm",
+      "category": ["nz-native", "palm"],
+      "sciencyName": "Rhopalostylis sapida",
+      "sun":" Full sunshine",
+      "imgLink": "https://thisnzlife.co.nz/wp-content/uploads/2016/12/A-Country-Life-nikau-palm-031.jpg",
+      "height": "2m",
+      "growthRate": "Slow",
+      "price": "80"
+    },
+
+    {
+      "id": "0004",
+      "name": "Potting Soil",
+      "category": ["soil"],
+      "sciencyName": "",
+      "imgLink": "https://www.scotts.com/sites/g/files/oydgjc106/files/asset_images/products/Scotts/mulch/image/US-Scotts--Premium-Potting-Soil-With-Fertilizer-Main-NA-Lrg.png",
+      "price": "20"
+    }
+  ]
+}
