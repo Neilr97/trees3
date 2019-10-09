@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Toolbar /> */}
+        {/* <Toolbar counter={functionname}></Toolbar> */}
         <Fragment>
         <nav className="navbar sticky-top navbar-expand-lg">
           <div className="container">
@@ -38,8 +38,8 @@ class App extends Component {
               </div>
             </a>
             <a className="d-none d-md-inline-block">
-              <FiUser className="cust-addheading m-2" />
-              <FiShoppingCart className="cust-addheading m-2" />
+              <FiUser className="cust-addheading m-2" onClick={ (e)=> console.log('user') } />
+              <FiShoppingCart className="cust-addheading m-2" onClick={ (e)=> console.log('checkout') } />
                 <span className="badge badge-pill m-2 badge-dark">
                   {this.state.cartItems.length === 0 ? '' : this.state.cartItems.length}
                 </span>
@@ -107,7 +107,7 @@ class App extends Component {
       const cartItems = state.cartItems.filter(a => a.id !== item.id);
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       return { cartItems: cartItems };
-    })
+    });
   }
 
   handleAddToCart(e, item) {
@@ -116,7 +116,7 @@ class App extends Component {
       let itemInCart = false;
       cartItems.forEach(ci => {
         if (ci.id === item.id) {
-          item.count += 1;
+          item.count++;
           itemInCart = true;
         }
       });

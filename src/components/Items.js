@@ -6,7 +6,7 @@ class Items extends Component {
     const displayItems = this.props.items.map(item => (
       <div className="col-md-4" key={item.id}>
         <div className="thumbnail text-center m-2">
-          <a href={`#${item.id}`} onClick={ (e)=> this.props.handleAddToCart(e, item)}>
+          <a href={`#${item.id}`} onClick={ (e)=> console.log('description') }>
             <img src={item.imgLink} height={200} width={200} alt={item.name} />
             <p><b className="text-dark m-2">{item.name}</b></p>
           </a>
