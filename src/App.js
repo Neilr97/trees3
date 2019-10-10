@@ -1,31 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import Search from './components/Search';
 
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Trees Project. <br></br>Please stand by for launch.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test! Test! Test!
-        </a>
-      </header>
-    </div>
-  );
-  /*Render for Search Component*/
-  /*constructor(props){
+class App extends Component {
+    /*Render for Search Component*/
+  constructor(props){
     super(props);
     let arrayLevel = [];
     if (Items.length > 0) {
@@ -94,7 +75,7 @@ function App() {
       items: newArray,
       valueSearch: search
     });
-  }*/
+  }
 }
 
 
