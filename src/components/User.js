@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { register } from '../serviceWorker';
+import { PostData } from './PostData';
+
 
 const emailRegularExpression = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
@@ -13,6 +15,7 @@ const vaildationForm = errorCatch => {
 };
 
 class User extends Component {
+    
     constructor(props){
         super(props);
         
@@ -27,23 +30,39 @@ class User extends Component {
                 password: "",
                 email: "",
             }
+            
         };
-    }
-    writeToJSON = () =>
-    {
-        const fs = require('fs');
 
-        let user = {
-            fname:this.state.firstName,
-            lname:this.state.lastName,
-            email:this.state.email,
-            password:this.state.password
-        };
-        console.log(user);
-
-        let data = JSON.stringify(user);
-        fs.writeFileSync("../users.json",data);
+        this.login = this.login.bind(this);
     }
+
+    login(){
+        require(PostData);
+        PostData('login', this.state).then ((result) =>{
+            let responseJSON = result;
+            if(responseJSON.user)
+            console.log(responseJSON);
+        });
+    }
+ 
+    // writeToJSON = () =>
+    // {
+    //      const fs = require('fs');
+
+    //     let user = {
+    //         fname:this.state.firstName,
+    //         lname:this.state.lastName,
+    //         email:this.state.email,
+    //         password:this.state.password
+    //     };
+    //     console.log(user);
+
+    //     let data = JSON.stringify(user);
+    //     fs.writeFileSync("../users.json",data);
+
+    
+
+
 
     handleSubmit = a => {
         a.preventDefault();
@@ -76,7 +95,6 @@ class User extends Component {
                 errorCatch.email = emailRegularExpression.test(value) < 3 && value.length > 0 ? "":"Invaild Email";
             break;
 
-            break;
             default:
             break;
         }
@@ -91,7 +109,7 @@ class User extends Component {
         return <div className = "wrap">
             <div className="form-wrap">
             <h1>Create Account</h1>
-            <form on onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div className ="firstname">
                 <label htmlFor="firstName">First Name</label>
                 <input 
@@ -140,16 +158,16 @@ class User extends Component {
                 className={errorCatch.password.length > 0 ? "error" : null}
                 placeholder="Password" 
                 type="password" 
-                name="firstName"
+                name="password"
                 noValidate
-                onChange={this.handleChange}
+                onChange={this.handleChange}    
                 />
                 {errorCatch.password.length > 0 && (
                     <span className = "errorMessage">{errorCatch.password}</span>
                 )}
                 </div>
                 <div className="accountCreate">
-                    <button type="submit" onClick={this.writeToJSON}>Create Account</button>
+                    <button type="submit" onClick={this.user}>Create Account</button>
                 </div>
             </form>
             </div>
