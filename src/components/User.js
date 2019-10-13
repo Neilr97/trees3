@@ -4,8 +4,6 @@ import { PostData } from './PostData';
 import App from '../App';
 import '../App.css';
 
-
-
 const emailRegularExpression = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
 const vaildationForm = errorCatch => {
@@ -47,26 +45,7 @@ class User extends Component {
             console.log(responseJSON);
         });
     }
- 
-    // writeToJSON = () =>
-    // {
-    //      const fs = require('fs');
-
-    //     let user = {
-    //         fname:this.state.firstName,
-    //         lname:this.state.lastName,
-    //         email:this.state.email,
-    //         password:this.state.password
-    //     };
-    //     console.log(user);
-
-    //     let data = JSON.stringify(user);
-    //     fs.writeFileSync("../users.json",data);
-
     
-
-
-
     handleSubmit = a => {
         a.preventDefault();
         if(vaildationForm(this.state.errorCatch)) {
