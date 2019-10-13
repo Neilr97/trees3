@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { register } from '../serviceWorker';
 import { PostData } from './PostData';
+import App from '../App';
+import '../App.css';
+
 
 
 const emailRegularExpression = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
@@ -106,12 +109,12 @@ class User extends Component {
     render() {
         const{ errorCatch } = this.state;
 
-        return <div className = "wrap">
+        return( <div className = "wrap">
             <div className="form-wrap">
             <h1>Create Account</h1>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} noValidate>
                 <div className ="firstname">
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName"></label>
                 <input 
                 className={errorCatch.firstName.length > 0 ? "error" : null}
                 placeholder="First Name" 
@@ -125,7 +128,7 @@ class User extends Component {
                 )}
                 </div>
                 <div className ="lastName">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName"></label>
                 <input  
                 className={errorCatch.lastName.length > 0 ? "error" : null} 
                 placeholder="Last Name" 
@@ -168,10 +171,11 @@ class User extends Component {
                 </div>
                 <div className="accountCreate">
                     <button type="submit" onClick={this.user}>Create Account</button>
+                    <small>Have a Account Already?</small>
                 </div>
             </form>
             </div>
-        </div>;
+        </div>);
     }
 }      
 export default User;
